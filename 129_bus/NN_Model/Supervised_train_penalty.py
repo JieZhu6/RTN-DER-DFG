@@ -196,8 +196,8 @@ for epoch in range(epochs):
 
         # 4. 计算损失函数
         # obj_loss = obj_pre.mean() 
-        obj_loss = nn.MSELoss()(y_pred, y_batch) + nn.MSELoss()(obj_pre, obj_label)
-        # obj_loss = nn.MSELoss()(obj_pre, obj_label)
+        # obj_loss = nn.MSELoss()(y_pred, y_batch) + nn.MSELoss()(obj_pre, obj_label)
+        obj_loss = nn.MSELoss()(obj_pre, obj_label)
         # obj_loss = nn.MSELoss()(y_pred, y_batch)
         # 约束违反：每个样本的惩罚取平均
         voltage_penalty = torch.relu(-V_sq + 0.95**2).sum(dim=1).mean() \
@@ -278,8 +278,8 @@ for epoch in range(epochs):
 
             # 4. 计算损失函数
             # obj_loss = obj_pre.mean() 
-            obj_loss = nn.MSELoss()(y_pred, y_batch) + nn.MSELoss()(obj_pre, obj_label) 
-            # obj_loss = nn.MSELoss()(obj_pre, obj_label)
+            # obj_loss = nn.MSELoss()(y_pred, y_batch) + nn.MSELoss()(obj_pre, obj_label) 
+            obj_loss = nn.MSELoss()(obj_pre, obj_label)
             # obj_loss = nn.MSELoss()(y_pred, y_batch)
 
             # 约束违反：每个样本的惩罚取平均

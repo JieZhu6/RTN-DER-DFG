@@ -81,7 +81,6 @@ print("\n" + "="*70)
 print("加载神经网络模型（二分法训练）")
 print("="*70)
 HIDDEN_DIMS = [32,32]        # 隐藏层维度
-# HIDDEN_DIMS = [16,16] 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = DERDispatchNet(n_bus, n_pv, hidden_dims=HIDDEN_DIMS).to(device)
 

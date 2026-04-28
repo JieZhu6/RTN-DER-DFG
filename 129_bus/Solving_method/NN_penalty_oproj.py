@@ -85,10 +85,12 @@ print("加载神经网络模型")
 print("="*70)
 # HIDDEN_DIMS = [64, 64, 64]       # 隐藏层维度
 HIDDEN_DIMS = [32, 32] 
+LEARNING_RATE = 1e-3          # 学习率
+BATCH_SIZE = 64   
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = DERDispatchNet(n_bus, n_pv, hidden_dims=HIDDEN_DIMS).to(device)
 
-checkpoint = torch.load(f"NN_parameter/penalty_model_{HIDDEN_DIMS}.pth", map_location=device, weights_only=True)
+checkpoint = torch.load(f"NN_parameter/penalty_model_{HIDDEN_DIMS}_{BATCH_SIZE}_{LEARNING_RATE}.pth", map_location=device, weights_only=True)
 model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 

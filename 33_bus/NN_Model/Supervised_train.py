@@ -68,11 +68,11 @@ Y_test = torch.tensor(Y_test_np, dtype=torch.float32)
 # 训练超参数设置 (在此调整)
 # ==============================================================================
 
-LEARNING_RATE = 1e-4          # 学习率
+LEARNING_RATE = 1e-3         # 学习率
 BATCH_SIZE = 128             # 批大小
 EPOCHS = 3000                 # 训练轮数
 weight_decay = 1e-4                # 权重衰减（L2正则化）
-HIDDEN_DIMS = [32,32]      # 隐藏层维度
+HIDDEN_DIMS = [16,16]      # 隐藏层维度
 
 # 创建 DataLoader
 train_dataset = TensorDataset(X_train, Y_train)
@@ -208,16 +208,16 @@ model.load_state_dict(best_model_state)
 
 
 # 绘制训练曲线
-fig, ax = plt.subplots(figsize=(10, 6))
-ax.semilogy(train_losses, label='Train Loss')
-ax.semilogy(test_losses, label='Test Loss')
-ax.set_xlabel('Epoch')
-ax.set_ylabel('MSE Loss (log scale)')
-ax.set_title('Training Curve')
-ax.legend()
-ax.grid(True)
-plt.savefig('Test_result/Supervised_training_curve.png', dpi=300, bbox_inches='tight')
-print(f"训练曲线已保存到: Test_result/Supervised_training_curve.png")
+# fig, ax = plt.subplots(figsize=(10, 6))
+# ax.semilogy(train_losses, label='Train Loss')
+# ax.semilogy(test_losses, label='Test Loss')
+# ax.set_xlabel('Epoch')
+# ax.set_ylabel('MSE Loss (log scale)')
+# ax.set_title('Training Curve')
+# ax.legend()
+# ax.grid(True)
+# plt.savefig('Test_result/Supervised_training_curve.png', dpi=300, bbox_inches='tight')
+# print(f"训练曲线已保存到: Test_result/Supervised_training_curve.png")
 
 print("\n" + "="*70)
 print("训练完成!")
