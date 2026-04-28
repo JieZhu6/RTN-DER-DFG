@@ -412,29 +412,6 @@ n_feasible = np.sum(feasible_before_array)
 
 avg_proj_time_all = np.mean(projection_times)
 avg_proj_time_infeasible = np.mean(np.array(projection_times)[~feasible_before_array]) if n_infeasible > 0 else 0
-
-
-# 保存结果
-results = {
-    'method': 'NN_IPOPT_Projection',
-    'decision_times': decision_times,
-    'nn_times': nn_times,
-    'projection_times': projection_times,
-    'feasible_before': feasible_before_array,
-    'feasible': feasible_array,
-    'objective_values': objective_values,
-    'avg_decision_time': np.mean(decision_times),
-    'feasibility_rate': np.mean(feasible_array),
-    'avg_objective_value': np.mean(objective_values),
-    'nn_feasible_rate': np.mean(feasible_before_array),
-    'avg_proj_time_all': avg_proj_time_all,
-    'avg_proj_time_infeasible': avg_proj_time_infeasible,
-    'n_infeasible': int(n_infeasible),
-    'n_feasible': int(n_feasible),
-}
-np.savez("Test_result/results_O_NN.npz", **results)
-print(f"\n结果已保存到: Test_result/results_O_NN.npz")
-
 # 计算 label 的最优目标函数值
 print("\n计算 label 的最优目标函数值...")
 
@@ -457,6 +434,30 @@ for j in range(n_test):
     )
 l_sq_label = np.array(l_sq_label_list)
 label_objective_values = np.array(label_objective_values_list)
+
+# 保存结果
+results = {
+    'method': 'NN_IPOPT_Projection',
+    'decision_times': decision_times,
+    'nn_times': nn_times,
+    'projection_times': projection_times,
+    'feasible_before': feasible_before_array,
+    'feasible': feasible_array,
+    'objective_values': objective_values,
+    'label_objective_values': label_objective_values,
+    'avg_decision_time': np.mean(decision_times),
+    'feasibility_rate': np.mean(feasible_array),
+    'avg_objective_value': np.mean(objective_values),
+    'nn_feasible_rate': np.mean(feasible_before_array),
+    'avg_proj_time_all': avg_proj_time_all,
+    'avg_proj_time_infeasible': avg_proj_time_infeasible,
+    'n_infeasible': int(n_infeasible),
+    'n_feasible': int(n_feasible),
+}
+np.savez("Test_result/results_O_NN.npz", **results)
+print(f"\n结果已保存到: Test_result/results_O_NN.npz")
+
+
 
 
 print(f"平均每个样本总时间 (NN推理 + IPOPT投影) : {np.mean(decision_times):.4f} s")

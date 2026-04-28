@@ -148,7 +148,7 @@ penalty_losses = []
 # 自动调节罚函数系数
 # penalty 系数初始化
 k_obj = 1
-k_initial = 0.2
+k_initial = 1
 # 罚函数
 k_bar = 1 # 上限值
 k_min = 0.1
