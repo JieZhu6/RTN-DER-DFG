@@ -1,10 +1,5 @@
 """
 神经网络模型验证脚本（NN + 二分法投影）
-基于 USL_NN_penalty_oproj.py，使用二分法投影代替IPOPT投影
-逐个样本处理以计算准确的平均时间
-
-使用方法:
-    python USL_NN_bisection.py
 """
 
 import sys

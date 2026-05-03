@@ -1,9 +1,5 @@
 """
 神经网络模型验证脚本（USL惩罚训练 NN 直接输出，无投影）
-逐个样本处理，用于公平对比
-
-使用方法:
-    python USL_NN_penalty.py
 """
 
 import sys
