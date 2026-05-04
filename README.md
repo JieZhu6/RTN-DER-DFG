@@ -34,9 +34,6 @@ All necessary dependencies and configurations are included in the respective fol
 - **To regenerate or customize training data:** Use the scripts in the `Data_generation` folder.
 
 ## Citation
-
-If you use this code in your research, please cite our paper:
-
 J. Zhu, Y. Xu, and H. Sun, "Real-Time Neural Distributed Energy Resources Dispatch with Feasibility Guarantees," *arXiv preprint arXiv:2605.00317*, May 2026. [Online]. Available: https://arxiv.org/abs/2605.00317
 
 ### BibTeX
