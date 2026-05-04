@@ -1,43 +1,46 @@
-Real-Time Neural Distributed Energy Resources Dispatch with Feasibility Guarantees
+# Real-Time Neural Distributed Energy Resources Dispatch with Feasibility Guarantees
 
-This repository contains the implementation of the paper "Real-Time Neural Distributed Energy Resources Dispatch with Feasibility Guarantees".
+This repository contains the implementation of the paper **"Real-Time Neural Distributed Energy Resources Dispatch with Feasibility Guarantees"**.
 
-Overview
+## Overview
 
-The code provides a neural network-based approach for real-time dispatch of distributed energy resources (DERs) while ensuring system feasibility guarantees. The framework enables fast and reliable decision-making for modern power systems with high penetration of renewable energy sources.
+The code provides a neural network-based approach for real-time dispatch of distributed energy resources while ensuring system feasibility guarantees. The framework enables fast and reliable decision-making for modern power systems with high penetration of renewable energy sources.
 
-Repository Structure
+## Repository Structure
 
-Solving_method/: Contains the main implementation files. Running the scripts in this folder will directly reproduce the results presented in the paper.
+| Directory | Description |
+|-----------|-------------|
+| `Solving_method/` | Main implementation files. Running the scripts in this folder will directly reproduce the results presented in the paper. |
+| `System_data/` | System topology parameters and configuration files. You can view and modify these parameters to adapt the framework to different test systems. |
+| `Data_generation/` | Scripts and tools for generating training data used in the neural network training process. |
 
-System_data/: Stores system topology parameters and configuration files. You can view and modify these parameters to adapt the framework to different test systems.
-
-Data_generation/: Includes scripts and tools for generating training data used in the neural network training process.
-
-Getting Started
+## Getting Started
 
 To reproduce the results from the paper:
 
-Open the 33_bus folder or the 129_bus folder as the root directory, and navigate to the Solving_method directory.
-
-Run the provided scripts (NN_direct.py,NN_penalty.py,NN_penalty_oproj.py, and NN_bisection.py,) directly.
+1. Open the `33_bus` folder or the `129_bus` folder as the root directory.
+2. Navigate to the `Solving_method` directory.
+3. Run the provided scripts directly:
+   - `NN_direct.py`
+   - `NN_penalty.py`
+   - `NN_penalty_oproj.py`
+   - `NN_bisection.py`
 
 All necessary dependencies and configurations are included in the respective folders.
 
-Customization
+## Customization
 
-To modify system parameters: Edit files in the System_data folder
-
-To regenerate or customize training data: Use the scripts in the Data_generation folder
+- **To modify system parameters:** Edit files in the `System_data` folder.
+- **To regenerate or customize training data:** Use the scripts in the `Data_generation` folder.
 
 ## Citation
 
 If you use this code in your research, please cite our paper:
 
-**Plain Text:**
-J. Zhu, Y. Xu, and H. Sun, "Real-Time Neural Distributed Energy Resources Dispatch with Feasibility Guarantees," arXiv preprint arXiv:2605.00317, May 2026. [Online]. Available: https://arxiv.org/abs/2605.00317
+J. Zhu, Y. Xu, and H. Sun, "Real-Time Neural Distributed Energy Resources Dispatch with Feasibility Guarantees," *arXiv preprint arXiv:2605.00317*, May 2026. [Online]. Available: https://arxiv.org/abs/2605.00317
 
-**BibTeX:**
+### BibTeX
+
 ```bibtex
 @article{zhu2026realtime,
   title={Real-Time Neural Distributed Energy Resources Dispatch with Feasibility Guarantees},
@@ -45,7 +48,7 @@ J. Zhu, Y. Xu, and H. Sun, "Real-Time Neural Distributed Energy Resources Dispat
   journal={arXiv preprint arXiv:2605.00317},
   year={2026},
   month={may},
-  url={https://arxiv.org/abs/2605.00317},
-  note={[v1] Fri, 1 May 2026 00:55:48 UTC}
+  url={https://arxiv.org/abs/2605.00317}
 }
+
 
