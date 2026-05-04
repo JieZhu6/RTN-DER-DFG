@@ -30,6 +30,22 @@ To modify system parameters: Edit files in the System_data folder
 
 To regenerate or customize training data: Use the scripts in the Data_generation folder
 
-Citation
+## Citation
 
 If you use this code in your research, please cite our paper:
+
+**Plain Text:**
+J. Zhu, Y. Xu, and H. Sun, "Real-Time Neural Distributed Energy Resources Dispatch with Feasibility Guarantees," arXiv preprint arXiv:2605.00317, May 2026. [Online]. Available: https://arxiv.org/abs/2605.00317
+
+**BibTeX:**
+```bibtex
+@article{zhu2026realtime,
+  title={Real-Time Neural Distributed Energy Resources Dispatch with Feasibility Guarantees},
+  author={Zhu, Jie and Xu, Yinliang and Sun, Hongbin},
+  journal={arXiv preprint arXiv:2605.00317},
+  year={2026},
+  month={may},
+  url={https://arxiv.org/abs/2605.00317},
+  note={[v1] Fri, 1 May 2026 00:55:48 UTC}
+}
+
